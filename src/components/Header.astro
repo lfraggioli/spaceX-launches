@@ -1,0 +1,39 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header
+  class="py-3 max-h-auto px-4 mx-auto bg-slate-900 max-w-full lg:py-6 lg:px-16"
+>
+  <div class="mx-auto text-center mb-2 lg:mb-4">
+    <h2 class="mb-1 text-6xl tracking-tight font-extrabold text-white">
+      Header 🚀
+    </h2>
+  </div>
+  <nav
+    class="flex flex-col text-xl items-center justify-between w-full text-center md:flex-row"
+  >
+    <HeaderButton class="text-stone-300" href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        slot="before"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
+        ></path><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path><path
+          d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg
+      >Noticias
+    </HeaderButton>
+    <HeaderButton class="text-stone-300" href="/about">
+      Sobre el proyecto
+    </HeaderButton>
+    <HeaderButton class="text-stone-300" href="/oldest">Imágenes</HeaderButton>
+  </nav>
+</header>
