@@ -1,22 +1,8 @@
 ---
-import { type SpaceXResponse } from "../types/api.ts";
 import CardLaunch from "./CardLaunch.astro";
-const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    query: {},
-    options: {
-      sort: {
-        date_unix: "asc",
-      },
-      limit: 12,
-    },
-  }),
-});
-const { docs: launches } = (await res.json()) as SpaceXResponse;
+import { getLaunches } from "../services/spacex";
+
+const launches = await getLaunches();
 ---
 
 <div class="py-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

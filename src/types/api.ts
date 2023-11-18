@@ -45,7 +45,7 @@ interface Fairings {
   ships: string[];
 }
 
-interface Docs {
+export type Docs = {
   fairings: Fairings | null;
   links: Links;
   static_fire_date_utc: string | null;
@@ -73,7 +73,7 @@ interface Docs {
   tbd: boolean;
   launch_library_id: string | null;
   id: string;
-}
+};
 
 export type SpaceXResponse = {
   docs: Docs[];
